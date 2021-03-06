@@ -30,9 +30,9 @@ batting <- Batting %>%
 
 ISO_plot <- ggplot() +
   geom_line(data = batting, 
-            aes(x = yearID, y = ISO), 
+            aes(x = yearID, y = OPS), 
             color = "dodger blue", size = 2) +
-  ggtitle("League wide Isolated Power (ISO) by Season") +
+  ggtitle("League wide On-Base plus Slugging (OPS) by Season") +
   xlab("Season") +
   theme(
     plot.title = element_text(hjust = 0.5),
@@ -40,8 +40,3 @@ ISO_plot <- ggplot() +
     axis.ticks.y = element_blank(),
     axis.text.y = element_blank())
 ISO_plot
-                    
-
-head(batting)
-#comment
-
